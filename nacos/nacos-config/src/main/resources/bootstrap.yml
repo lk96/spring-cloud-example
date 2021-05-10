@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      config:
+        server-addr: 120.27.11.244:9123
+        username: nacos
+        password: nacos
+        file-extension: yaml
+        enabled: true

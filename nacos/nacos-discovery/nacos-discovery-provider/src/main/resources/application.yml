@@ -1,0 +1,20 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: nacos-discovery-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.27.11.244:9123
+      username: nacos
+      password: nacos
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
