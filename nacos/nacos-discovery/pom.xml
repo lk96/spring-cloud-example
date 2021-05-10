@@ -19,6 +19,8 @@
         <module>nacos-discovery-consumer</module>
         <module>nacos-discovery-config-client</module>
         <module>nacos-discovery-config-server</module>
+        <module>nacos-discovery-config-server</module>
+        <module>nacos-discovery-reactived-consumer</module>
     </modules>
 
 </project>

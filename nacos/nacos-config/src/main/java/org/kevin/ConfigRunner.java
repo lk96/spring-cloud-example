@@ -29,7 +29,7 @@ public class ConfigRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         nacosConfigManager.getConfigService().addListener(
-                "example.properties", "DEFAULT_GROUP", new Listener() {
+                "nacos-config.properties", "DEFAULT_GROUP", new Listener() {
                     @Override
                     public Executor getExecutor() {
                         return null;

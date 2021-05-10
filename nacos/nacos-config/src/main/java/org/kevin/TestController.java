@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class TestController {
 
-    @Value("${useLocalCache:unknown}")
+    @Value("${useLocalCache}")
     private String useLocalCache;
 
     @RequestMapping("/get")

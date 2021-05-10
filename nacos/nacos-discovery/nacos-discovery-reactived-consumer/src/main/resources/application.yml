@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: nacos-disvovery-server-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.27.11.244:9123
+      username: nacos
+      password: nacos
+    loadbalancer:
+      ribbon:
+        enabled: false
+server:
+  port: 8086
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

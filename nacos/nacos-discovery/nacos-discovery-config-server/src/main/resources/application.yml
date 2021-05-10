@@ -1,0 +1,17 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: 120.27.11.244:9123
+    config:
+      server:
+        git:
+          uri: https://github.com/lk96/studyInfo
+          search-paths: /

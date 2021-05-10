@@ -1,3 +1,4 @@
-name: config-client-yml
+config: config-client-yml
+
 server:
   port: 8083
