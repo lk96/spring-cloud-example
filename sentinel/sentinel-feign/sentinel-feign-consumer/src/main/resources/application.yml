@@ -1,0 +1,27 @@
+server:
+  port: 9101
+
+spring:
+  application:
+    name: sentinel-feign-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.27.11.244:9123
+      username: nacos
+      password: nacos
+    sentinel:
+      transport:
+        dashboard: 120.27.11.244:9124
+feign:
+  sentinel:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+service:
+  name: sentinel-feign-provider

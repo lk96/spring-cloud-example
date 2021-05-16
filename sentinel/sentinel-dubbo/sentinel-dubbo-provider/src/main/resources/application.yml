@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: sentinel-dubbo-provider
+
+
+service:
+  version: 1.0.0
+dubbo:
+  scan:
+    base-packages: org.kevin
+  application:
+    id: sentinel-dubbo-provider
+    name: sentinel-dubbo-provider
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 12345
+    status: server
+  registry:
+    id: sentinel-dubbo-provider
+    address: N/A
+server:
+  port: 9102

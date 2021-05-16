@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: config-server
+    name: nacos-config-server
   cloud:
     nacos:
       username: nacos

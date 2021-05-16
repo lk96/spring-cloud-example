@@ -2,7 +2,6 @@ package org.kevin;
 
 import com.alibaba.cloud.nacos.NacosConfigManager;
 import com.alibaba.nacos.api.config.listener.Listener;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -14,13 +13,7 @@ import java.io.StringReader;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 
-/**
- * @Author: kai Li
- * Date: 2021/5/10 15:22
- * @Description:
- */
 @Component
-@Slf4j
 public class ConfigRunner implements ApplicationRunner {
 
     @Resource
@@ -28,8 +21,7 @@ public class ConfigRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        nacosConfigManager.getConfigService().addListener(
-                "nacos-config.properties", "DEFAULT_GROUP", new Listener() {
+        nacosConfigManager.getConfigService().addListener("nacos-config-example.properties", "DEFAULT_GROUP", new Listener() {
                     @Override
                     public Executor getExecutor() {
                         return null;
@@ -41,9 +33,9 @@ public class ConfigRunner implements ApplicationRunner {
                         try {
                             properties.load(new StringReader(configInfo));
                         } catch (IOException e) {
-                            log.error("IOException:{}", e.getMessage());
+                            e.printStackTrace();
                         }
-                        log.info("properties change:{}", properties);
+                        System.out.println("config changed: " + properties);
                     }
                 }
         );

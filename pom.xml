@@ -13,6 +13,14 @@
     <modules>
         <module>nacos/nacos-discovery</module>
         <module>nacos/nacos-config</module>
+        <module>nacos/nacos-gateway</module>
+        <module>sentinel/sentinel-core</module>
+        <module>sentinel/sentinel-feign/sentinel-feign-provider</module>
+        <module>sentinel/sentinel-feign/sentinel-feign-consumer</module>
+        <module>sentinel/sentinel-dubbo/sentinel-dubbo-api</module>
+        <module>sentinel/sentinel-dubbo/sentinel-dubbo-provider</module>
+        <module>sentinel/sentinel-dubbo/sentinel-dubbo-consumer</module>
+        <module>sentinel/sentinel-gateway</module>
     </modules>
 
 
@@ -58,12 +66,17 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
+   <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
+       <dependency>
+           <groupId>org.springframework.cloud</groupId>
+           <artifactId>spring-cloud-starter-bootstrap</artifactId>
+       </dependency>
     </dependencies>
 
 </project>

@@ -1,0 +1,28 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: nacos-gateway-discovery
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 120.27.11.244:9123
+      username: naocs
+      password: nacos
+    gateway:
+      routes:
+        - id: nacos-route
+          uri: lb://nacos-gateway-provider
+          predicates:
+            - Path=/nacos/**
+          filters:
+            - StripPrefix=1
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -10,5 +10,6 @@ spring:
     config:
       discovery:
         enabled: true
-    profiles:
-      active: dev
+        service-id: nacos-config-server
+  profiles:
+    active: dev
